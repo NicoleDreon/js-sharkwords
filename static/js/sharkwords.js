@@ -19,15 +19,17 @@ let numWrong = 0;
 // Loop over the chars in `word` and create divs.
 //
 const createDivsForChars = (word) => {
-  for (letter of word) {
-    $("#word-container").append(`<div class="letter-box ${letter}"></div>`);
+  for (char of word) {
+    $("#word-container").append(`<div class="letter-box ${char}"></div>`);
   }
 };
 
 // Loop over each letter in `ALPHABET` and generate buttons.
 //
 const generateLetterButtons = () => {
-  // Replace this with your code
+  for (char of ALPHABET) {
+    $("#letter-buttons").append(`<button>${char}</button>`);
+  }
 };
 
 // Set the `disabled` property of `buttonEl` to `true.
